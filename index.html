@@ -119,7 +119,72 @@
           <span class="badge" style="background:#eef4ff;color:#27466f;">欢迎加入淫欲宗</span>
         </div>
         <div class="intro-grid">
-          <div class="intro-text">在广袤无垠的大世界西南边陲，有一片被天地遗忘的偏僻山谷一一幽莲谷。这里灵气稀薄到近乎枯竭，常年云雾缭绕，终日阴冷潮湿，谷中怪石嶙峋，唯有后山一汪灵泉维持着谷内最后的生机。
+          <div class="intro-text">在广袤无垠的大世界西南边陲，有一片被天地遗忘的偏僻山谷一静莲谷。这里灵气稀薄到近乎枯竭，常年云雾缭绕，终日阴冷潮湿，谷中怪石嶙峋，唯有后山一汪灵泉维持着谷内最后的生机。
+三年前，一位化神初期女修(目前修为深不可测)在此隐居多年后，正式立宗，宗名初为静莲宗，后因弟子私下流传而逐渐被改口为淫欲宗。
+淫欲宗乃大世界边缘最鱼龙混杂的地方:逃亡的魔修、走火入魔的正道弃徒、被宗门追杀的叛徒、妖族化形、散修废柴、甚至一些不愿透露身份的诡异存在......皆可在此苟且偷生。
+          宗门境界划分：炼气期-（5次文爱后筑淫）筑淫期-（五次文爱后与随机找一外门弟子让其沦陷即可结丹）淫丹期-（五次文爱后在外门杂役进行一次公演才可化婴）淫婴期-淫神期-炼虚期-合欲期-大乘期-？</div>
+          <div class="intro-side">
+            <div class="intro-item"><div class="k">宗门名称</div><div class="v">淫欲宗</div></div>
+            <div class="intro-item"><div class="k">主修方向</div><div class="v">双修、阴阳互补、炼制炉鼎、极乐功</div></div>
+            <div class="intro-item"><div class="k">宗门风格</div><div class="v">淫荡、淫乱、涩情、混乱、安全</div></div>
+            <div class="intro-item"><div class="k">宗门宗旨</div><div class="v">不问正魔出身
+不限功法路数
+不拘修为高低
+不查来历背景
+只要愿意承担杂役、或挂个名号，便可成为弟子。</div></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="toolbar">
+        <div class="search"><span class="search-icon">🔍</span><input id="searchInput" type="text" placeholder="搜索姓名、法宝、外貌、背景故事、功法、灵根、性癖" /></div>
+        <select id="genderFilter" class="select"><option value="">全部性别</option></select>
+        <select id="rootFilter" class="select"><option value="">全部灵根</option></select>
+        <select id="realmFilter" class="select"><option value="">全部修为</option></select>
+      </div>
+
+      <div class="actions">
+        <button class="btn primary" id="resetBtn">重置筛选</button>
+        <button class="btn" id="sortAgeBtn">按年龄排序</button>
+        <button class="btn" id="sortRealmBtn">按修为排序</button>
+      </div>
+
+      <div class="tip">查看即可</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="memberGrid" class="grid"></section>
+    <div id="emptyState" class="empty">没有找到符合条件的角色。</div>
+    <div class="footer"><br></div>
+  </main>
+
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="panel">
+      <button id="closeModal" class="close">×</button>
+      <div class="panel-header">
+        <div id="modalAvatar" class="panel-avatar">人</div>
+        <div>
+          <h2 id="modalName" class="panel-title">角色姓名</h2>
+          <div id="modalSub" class="panel-sub">角色概览</div>
+          <div id="modalTags" class="panel-tags"></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>基础信息</h3>
+        <div class="detail-grid">
+          <div class="detail-item"><div class="k">姓名</div><div class="v" id="dName"></div></div>
+          <div class="detail-item"><div class="k">性别</div><div class="v" id="dGender"></div></div>
+          <div class="detail-item"><div class="k">年龄</div><div class="v" id="dAge"></div></div>
+          <div class="detail-item"><div class="k">性取向</div><div class="v" id="dOrientation"></div></div>
+          <div class="detail-item"><div class="k">性癖</div><div class="v" id="dFetish"></div></div>
+          <div class="detail-item"><div class="k">功法</div><div class="v" id="dCultivation"></div></div>
+          <div class="detail-item"><div class="k">灵根</div><div class="v" id="dSpiritRoot"></div></div>
+          <div class="detail-item"><div class="k">修为</div><div class="v" id="dRealm"></div></div>
+          <div class="detail-item"><div class="k">法宝</div><div class="v" id="dMagicWeapon"></div></div>
+        </div>
+      </div莲谷。这里灵气稀薄到近乎枯竭，常年云雾缭绕，终日阴冷潮湿，谷中怪石嶙峋，唯有后山一汪灵泉维持着谷内最后的生机。
 三年前，一位化神初期女修(目前修为深不可测)在此隐居多年后，正式立宗，宗名初为静莲宗，后因弟子私下流传而逐渐被改口为淫欲宗。
 淫欲宗乃大世界边缘最鱼龙混杂的地方:逃亡的魔修、走火入魔的正道弃徒、被宗门追杀的叛徒、妖族化形、散修废柴、甚至一些不愿透露身份的诡异存在......皆可在此苟且偷生。
           宗门境界划分：炼气期-（5次文爱后筑淫）筑淫期-（五次文爱后与随机找一外门弟子让其沦陷即可结丹）淫丹期-（五次文爱后在外门杂役进行一次公演才可化婴）淫婴期-淫神期-炼虚期-合欲期-大乘期-？</div>
@@ -193,7 +258,7 @@
 
   <script>
     const members = [
-      { name:"淫欲仙子·婧熙嗳", gender:"女", age:"未知", orientation:"不限", fetish:"阳气旺盛弟子", cultivation:"极乐功", spiritRoot:"全灵根", realm:"深不可测", magicWeapon:"幽莲法宝", appearance:"冷艳高洁的东方幻想仙子形象，仿佛从青瓷画卷中走出的不食人间烟火的莲花仙尊。", story:`婧熙嫒出身于大世界边缘一处早已覆灭的隐世小派，原为天赋异禀的散修天才。千年前她偶然获得上古禁法《极乐经》残卷，此功法以“性爱快感本身即灵力增幅”为核心，越契合自身性癖的行为转化效率越高。  
+      { name:"淫欲仙子·婧熙嗳", gender:"女", age:"未知", orientation:"不限", fetish:"阳气旺盛弟子", cultivation:"极乐功", spiritRoot:"全灵根", realm:"深不可测", magicWeapon:"静莲法宝", appearance:"冷艳高洁的东方幻想仙子形象，仿佛从青瓷画卷中走出的不食人间烟火的莲花仙尊。", story:`婧熙嫒出身于大世界边缘一处早已覆灭的隐世小派，原为天赋异禀的散修天才。千年前她偶然获得上古禁法《极乐经》残卷，此功法以“性爱快感本身即灵力增幅”为核心，越契合自身性癖的行为转化效率越高。  
 起初她以“静修莲心”为名苦修，试图用元婴修为强行压抑欲火，将极乐经当作纯粹的辅助心法。数百年间，她在灵气稀薄的幽莲谷隐居，亲手建立“静莲宗”（淫欲宗），表面上，她是清冷威严的女宗主，手持莲花讲道时声音如冰：修道者，当心无旁骛。内心却早在修炼极乐经中后期便彻底沦陷`, tags:["全灵根","最强","女","莲花类法宝"] },
       { name:"豆子·大师兄", gender:"男", age:"19", orientation:"女", fetish:"s、剧情、慢节奏", cultivation:"阴阳金水决", spiritRoot:"水灵根/金灵根", realm:"未知", magicWeapon:"仙豆", appearance:"精壮结实，宽肩厚胸，粗臂壮腿，小麦色皮肤手上布满老茧。", story:`偏远山村最底层农户出身，父母早亡，靠给地主种地放牛维生。被在外游历的宗主发现身上阳气极为浓厚，且有极为精纯的水灵根和金灵根，被收在身边当首席亲传弟子。阴阳金水诀擅长控制水元素和金元素，让其阳器一直坚挺，精液浓稠且源源不断。身上的仙豆法宝也可放入女弟子体内产生特别功效。`, tags:["水灵根","金灵根","未知","男","豆类法宝"] },
       { name:"草莓味的鬼", gender:"女", age:"29", orientation:"双", fetish:"轻m", cultivation:"极乐功·鬼道篇", spiritRoot:"水灵根", realm:"筑淫期", magicWeapon:"无", appearance:`她生得一副清冷出尘的面容，束起的高马尾利落飒爽，几缕碎发垂在鬓角。眉眼冷淡疏离，唇色淡粉偏薄，抿起来时显得清冷禁欲。
